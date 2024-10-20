@@ -193,7 +193,7 @@ export const Home = () => {
         </Container>
       </Box>
       <Box
-        pb={"164px"}
+        py={"164px"}
         sx={{
           backgroundImage: `url(${Customerbg})`,
           backgroundRepeat: "no-repeat",
@@ -275,7 +275,7 @@ export const Home = () => {
             </Box>
           </Stack>
           <Grid2 container spacing={"20px"}>
-            {PorductsData.slice(8, 12).map((item) => (
+            {PorductsData.slice(12, 16).map((item) => (
               <Grid2 key={item.id}>
                 <Products
                   id={item.id}

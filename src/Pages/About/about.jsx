@@ -27,6 +27,7 @@ export const About = () => {
         sx={{
           backgroundImage: `url(${AboutUsBg})`,
           backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
           py: "184px",
           mb: "68px",
         }}
@@ -45,83 +46,82 @@ export const About = () => {
           <Stack width={"976px"} height={"929px"}>
             <img src={AboutHero} alt="img" />
           </Stack>
-          <Stack position={"relative"} width={"50%"}>
-            <Stack
-              position={"absolute"}
-              top={"50%"}
-              maxWidth={"671px"}
-              sx={{
-                transform: "translateY(-50%)",
-              }}
-              borderRadius={"30px"}
+          {/* <Stack position={"relative"} width={"50%"}> */}
+          <Stack
+            // position={"absolute"}
+            top={"50%"}
+            maxWidth={"671px"}
+            sx={
+              {
+                // transform: "translateY(-50%)",
+              }
+            }
+            borderRadius={"30px"}
+          >
+            <Typography
+              fontFamily={"Yellowtail"}
+              fontWeight={400}
+              variant="h4"
+              mb={"8px"}
+              color={Colors.lightGreen}
             >
-              <Typography
-                fontFamily={"Yellowtail"}
-                fontWeight={400}
-                variant="h4"
-                mb={"8px"}
-                color={Colors.lightGreen}
+              About Us
+            </Typography>
+            <Typography mb={"14px"} variant="h2">
+              We do Creative Things for Success
+            </Typography>
+            <Box>
+              <Stack mb={"35px"}>
+                <Typography variant="body1">
+                  Simply dummy text of the printing and typesetting industry.
+                  Lorem had ceased to been the industry's standard dummy text
+                  ever since the 1500s, when an unknown printer took a galley.
+                </Typography>
+              </Stack>
+              <Stack mb={"35px"}>
+                <Typography variant="body1">
+                  Simply dummy text of the printing and typesetting industry.
+                  Lorem had ceased to been the industry's standard dummy text
+                  ever since the 1500s, when an unknown printer took a galley.
+                </Typography>
+              </Stack>
+              <Stack
+                direction={"row"}
+                gap={"65px"}
+                mb={"58px"}
+                alignItems={"center"}
               >
-                About Us
-              </Typography>
-              <Typography mb={"14px"} variant="h2">
-                We do Creative Things for Success
-              </Typography>
-              <Box>
-                <Stack mb={"35px"}>
-                  <Typography variant="body1">
-                    Simply dummy text of the printing and typesetting industry.
-                    Lorem had ceased to been the industry's standard dummy text
-                    ever since the 1500s, when an unknown printer took a galley.
-                  </Typography>
-                </Stack>
-                <Stack mb={"35px"}>
-                  <Typography variant="body1">
-                    Simply dummy text of the printing and typesetting industry.
-                    Lorem had ceased to been the industry's standard dummy text
-                    ever since the 1500s, when an unknown printer took a galley.
-                  </Typography>
-                </Stack>
-                <Stack
-                  direction={"row"}
-                  gap={"65px"}
-                  mb={"58px"}
-                  alignItems={"center"}
-                >
-                  <Stack direction={"row"} alignItems={"center"} gap={"15px"}>
-                    <LamborghiniIcon />
-                    <Typography
-                      width={"226px"}
-                      fontWeight={"600"}
-                      fontSize={"24px"}
-                      variant="h6"
-                    >
-                      Modern Agriculture Equipment
-                    </Typography>
-                  </Stack>
-                  <Stack direction={"row"} alignItems={"center"} gap={"15px"}>
-                    <Factoryicon />
-                    <Typography
-                      width={"226px"}
-                      fontWeight={"600"}
-                      fontSize={"24px"}
-                      variant="h6"
-                    >
-                      No growth hormones are used
-                    </Typography>
-                  </Stack>
-                </Stack>
-                <Box>
-                  <Button
-                    variant={"contained"}
-                    endIcon={<ButtonIconContained />}
+                <Stack direction={"row"} alignItems={"center"} gap={"15px"}>
+                  <LamborghiniIcon />
+                  <Typography
+                    width={"226px"}
+                    fontWeight={"600"}
+                    fontSize={"24px"}
+                    variant="h6"
                   >
-                    Explore More
-                  </Button>
-                </Box>
+                    Modern Agriculture Equipment
+                  </Typography>
+                </Stack>
+                <Stack direction={"row"} alignItems={"center"} gap={"15px"}>
+                  <Factoryicon />
+                  <Typography
+                    width={"226px"}
+                    fontWeight={"600"}
+                    fontSize={"24px"}
+                    variant="h6"
+                  >
+                    No growth hormones are used
+                  </Typography>
+                </Stack>
+              </Stack>
+              <Box>
+                <Button variant={"contained"} endIcon={<ButtonIconContained />}>
+                  Explore More
+                </Button>
               </Box>
-            </Stack>
+            </Box>
           </Stack>
+          {/* </Stack> */}
         </Stack>
       </Box>
       <Box bgcolor={Colors.darkWhite} mb={"177px"} py={"190px"}>
