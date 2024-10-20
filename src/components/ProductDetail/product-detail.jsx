@@ -37,7 +37,7 @@ export const ProductDetail = () => {
           Shop Single
         </Typography>
       </Box>
-      <Box>
+      <Box mb={"140px"}>
         <Container maxWidth={"lg"}>
           <Box mb={"90px"}>
             {data && (
