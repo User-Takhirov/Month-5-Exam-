@@ -1,13 +1,6 @@
 import React from "react";
-import AboutUsBg from "../../assets/img/AboutUsBg.png";
-import {
-  Box,
-  Stack,
-  Typography,
-  Button,
-  Container,
-  Grid2,
-} from "@mui/material";
+import AboutUsBg from "../../assets/img/aboutUsBg.png";
+import { Box, Stack, Typography, Button, Container } from "@mui/material";
 import { Colors } from "../../Config/Colors";
 import AboutHero from "../../assets/img/AboutHero.png";
 import { LamborghiniIcon } from "../../assets/icons/lamborghini-icon";
