@@ -12,7 +12,10 @@ export const Header = () => {
         <Stack direction={"row"} justifyContent={"space-between"} py={"69px"}>
           <Stack direction={"row"} gap={"150px"} alignItems={"center"}>
             <Box>
+              <Link to={'/'}>
+              
               <img src={logo} alt="#" />
+              </Link>
             </Box>
             <Stack direction={"row"} gap={"50px"}>
               {NavbarLink.map((item) => (

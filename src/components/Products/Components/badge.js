@@ -9,4 +9,5 @@ export const CustomBadge = styled(Button)`
   background-color: ${Colors.primary};
   color: ${Colors.white};
   padding-top: 10px;
+  margin: auto 0;
 `;

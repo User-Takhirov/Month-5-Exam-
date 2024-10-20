@@ -25,6 +25,10 @@ import { CustomerItems } from "../../components/CustomerItems";
 import { CustomButton } from "../../components/Custom-button/custom-button";
 import { YellowButtonIcon } from "../../assets/icons/yellow-button-icon";
 import Nature from "../../assets/img/nature.png";
+import { CategoriesData } from "../../Data/Categories-Data";
+import { Category } from "../../components/CategoriesDataMap";
+import { HomeComment } from "../../components/Home-comment";
+import { CommentData } from "../../Data/Comment-data";
 
 export const Home = () => {
   return (
@@ -48,7 +52,7 @@ export const Home = () => {
                   fontFamily={"Yellowtail"}
                   fontWeight={"400"}
                   color={Colors.white}
-                  variant="h6"
+                  variant="h4"
                 >
                   Natural!!
                 </Typography>
@@ -70,7 +74,7 @@ export const Home = () => {
                   fontFamily={"Yellowtail"}
                   fontWeight={"400"}
                   color={Colors.lightGreen}
-                  variant="h6"
+                  variant="h4"
                 >
                   Offer!!
                 </Typography>
@@ -91,7 +95,7 @@ export const Home = () => {
                 mb={"8px"}
                 color={Colors.lightGreen}
                 fontFamily={"Yellowtail"}
-                variant="h6"
+                variant="h4"
               >
                 About Us
               </Typography>
@@ -178,7 +182,11 @@ export const Home = () => {
             ))}
           </Grid2>
           <Box mt={"122px"} textAlign={"center"}>
-            <Button variant="contained" endIcon={<ButtonIconContained />}>
+            <Button
+              sx={{ height: "80px" }}
+              variant="contained"
+              endIcon={<ButtonIconContained />}
+            >
               Load More
             </Button>
           </Box>
@@ -257,7 +265,11 @@ export const Home = () => {
               We Offer Organic For You
             </Typography>
             <Box>
-              <CustomButton endIcon={<YellowButtonIcon />} variant="contained">
+              <CustomButton
+                sx={{ height: "80px" }}
+                endIcon={<YellowButtonIcon />}
+                variant="contained"
+              >
                 View All Product
               </CustomButton>
             </Box>
@@ -280,7 +292,11 @@ export const Home = () => {
         </Container>
       </Box>
       <Box>
-        <Stack direction={"row"} alignItems={"center"}>
+        <Stack
+          direction={"row"}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
           <Stack width={"950px"} height={"931px"}>
             <img src={Nature} alt="img" />
           </Stack>
@@ -303,11 +319,12 @@ export const Home = () => {
               <Typography
                 fontFamily={"Yellowtail"}
                 fontWeight={700}
-                variant="body1"
+                variant="h4"
+                color={Colors.lightGreen}
               >
                 Eco Friendly
               </Typography>
-              <Typography mb={"35px"} variant="h1">
+              <Typography mb={"35px"} variant="h2">
                 Econis is a Friendly Organic Store
               </Typography>
               <Box>
@@ -343,7 +360,67 @@ export const Home = () => {
           </Stack>
         </Stack>
       </Box>
-      
+      <Box mb={"177px"} bgcolor={Colors.category} py={"187px"}>
+        <Grid2 container textAlign={"center"} spacing={"42px"}>
+          {CategoriesData.map((item) => (
+            <Grid2 justifyContent={"space-between"} size={4} key={item.id}>
+              <Category text={item.text} img={item.img} />
+            </Grid2>
+          ))}
+        </Grid2>
+      </Box>
+      <Box mb={"253px"}>
+        <Container>
+          <Stack
+            direction={"row"}
+            alignItems={"center"}
+            justifyContent={"space-between"}
+            mb={"48px"}
+          >
+            <Box width={"1002px"}>
+              <Typography
+                mb={"8px"}
+                fontWeight={"400"}
+                fontFamily={"Yellowtail"}
+                variant="h4"
+                color={Colors.lightGreen}
+              >
+                News
+              </Typography>
+              <Typography variant="h2">
+                Discover weekly content about organic food, & more
+              </Typography>
+            </Box>
+            <Box>
+              <Button
+                sx={{ height: "80px" }}
+                endIcon={<YellowButtonIcon />}
+                variant="outlined"
+              >
+                More News
+              </Button>
+            </Box>
+          </Stack>
+          <Stack
+            direction={"row"}
+            alignItems={"center"}
+            gap={"46px"}
+            justifyContent={"center"}
+          >
+            {CommentData.map((item) => (
+              <Box key={item.id}>
+                <HomeComment
+                  img={item.img}
+                  text={item.text}
+                  title={item.title}
+                  badge={item.badge}
+                  commentor={item.commentor}
+                />
+              </Box>
+            ))}
+          </Stack>
+        </Container>
+      </Box>
     </>
   );
 };

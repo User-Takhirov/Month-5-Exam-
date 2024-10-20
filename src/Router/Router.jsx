@@ -7,7 +7,7 @@ import { ProductDetail } from "../components/ProductDetail";
 export const Router = () => {
   return (
     <Routes>
-      <Route path="/" element={<MainLayout />}>
+      <Route element={<MainLayout />}>
         {NavbarLink.map(({ path, element: Camp, id }) => {
           return <Route key={id} path={path} element={<Camp />} />;
         })}

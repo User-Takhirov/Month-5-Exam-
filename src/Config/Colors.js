@@ -8,4 +8,7 @@ export const Colors = {
   darkGrey: "#525C60",
   white: "#fff",
   rounded: "#f1f1f1",
+  category: "#f1f8f4",
+  cPrice: "#b8b8b8",
+  lighterGrey: "#ececec",
 };

@@ -12,7 +12,6 @@ export const theme = createTheme({
     },
   },
   typography: {
-
     h1: {
       fontWeight: 800,
       fontSize: "70px",
@@ -61,6 +60,7 @@ export const theme = createTheme({
       styleOverrides: {
         root: {
           color: "white",
+          textDecoration: "none",
         },
       },
     },
@@ -75,6 +75,7 @@ export const theme = createTheme({
             padding: "28px 39px 28px 39px",
             backgroundColor: `${Colors.primary}`,
             borderRadius: "16px",
+            height: "80px",
           },
         },
         {
@@ -87,6 +88,7 @@ export const theme = createTheme({
             backgroundColor: `${Colors.white}`,
             borderRadius: "16px",
             border: `1px solid ${Colors.primary}`,
+            height: "80px",
           },
         },
       ],
