@@ -91,6 +91,16 @@ export const theme = createTheme({
             height: "80px",
           },
         },
+        {
+          props: { variant: "text" },
+          style: {
+            fontWeight: 700,
+            fontSize: "20px",
+            color: `${Colors.primary}`,
+            backgroundColor: `${Colors.white}`,
+            borderRadius: "16px",
+          },
+        },
       ],
     },
   },

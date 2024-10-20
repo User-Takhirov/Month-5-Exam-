@@ -1,11 +1,10 @@
 import React from "react";
-import { CustomButton } from "../Custom-button/custom-button";
-import { Box, Typography, Stack } from "@mui/material";
+import { Box, Typography, Stack, Button } from "@mui/material";
 import { CommentIcon } from "../../assets/icons/comment-icon";
-import { YellowButtonIcon } from "../../assets/icons/yellow-button-icon";
 import styled from "@emotion/styled";
 import { Colors } from "../../Config/Colors";
-export const HomeComment = ({ title, text, img, badge, commentor }) => {
+import { ButtonIconContained } from "../../assets/icons/button-contained-icon";
+export const RecentNews = ({ title, text, img, badge, commentor }) => {
   const CustomBadge = styled("span")`
     font-weight: 800;
     font-size: 20px;
@@ -35,7 +34,7 @@ export const HomeComment = ({ title, text, img, badge, commentor }) => {
           position={"absolute"}
           bottom={"-60px"}
           borderRadius={"32px"}
-          padding={"46px 57px 60px 57px"}
+          padding={"54px 57px 54px 57px"}
           boxShadow={`0 20px 35px 0 rgba(167, 167, 167, 0.25);
 background: #fff;`}
         >
@@ -45,8 +44,12 @@ background: #fff;`}
             alignItems={"center"}
             gap={"8px"}
           >
-            <CommentIcon />
-            <Typography variant="body1">{commentor}</Typography>
+            <Box color={Colors.lightGreen}>
+              <CommentIcon />
+            </Box>
+            <Typography color={Colors.primary} variant="body1">
+              {commentor}
+            </Typography>
           </Stack>
           <Typography fontSize={"21px"} mb={"2px"} variant="h6">
             {title}
@@ -55,9 +58,9 @@ background: #fff;`}
             {text}
           </Typography>
           <Box>
-            <CustomButton endIcon={<YellowButtonIcon />}>
+            <Button variant="text" endIcon={<ButtonIconContained />}>
               Read More
-            </CustomButton>
+            </Button>
           </Box>
         </Box>
       </Box>

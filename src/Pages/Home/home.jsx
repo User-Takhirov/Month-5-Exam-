@@ -407,7 +407,7 @@ export const Home = () => {
             gap={"46px"}
             justifyContent={"center"}
           >
-            {CommentData.map((item) => (
+            {CommentData.slice(0, 2).map((item) => (
               <Box key={item.id}>
                 <HomeComment
                   img={item.img}
