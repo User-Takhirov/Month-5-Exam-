@@ -3,15 +3,15 @@ import React from "react";
 import { MiniFaceBook } from "../../assets/icons/mini-faceBook";
 import { MiniTwitter } from "../../assets/icons/mini-Twitter";
 import { MiniInstagram } from "../../assets/icons/mini-instagram";
-import Export1 from "../../assets/img/Export1.png";
-import Export2 from "../../assets/img/Export2.png";
-import Export3 from "../../assets/img/Export3.png";
+// import Export1 from "../../assets/img/Export1.png";
+// import Export2 from "../../assets/img/Export2.png";
+// import Export3 from "../../assets/img/Export3.png";
 import { Colors } from "../../Config/Colors";
-export const AboutExperts = () => {
+export const AboutExperts = ({ img, title, text }) => {
   return (
     <>
       <Stack direction={"row"} alignItems={"center"} gap={"27px"}>
-        <Box
+        {/* <Box
           width={"449px"}
           sx={{
             transition: "transform 0.3s ease",
@@ -56,7 +56,7 @@ export const AboutExperts = () => {
               </Stack>
             </Stack>
           </Box>
-        </Box>
+        </Box> */}
         <Box
           width={"449px"}
           sx={{
@@ -72,11 +72,11 @@ export const AboutExperts = () => {
           }}
         >
           <Box height={"485px"}>
-            <img src={Export2} alt="#" />
+            <img src={img} alt="#" />
           </Box>
           <Box p={"35px 28px"}>
             <Typography mb={"2px"} variant="h6">
-              Marianne Loreno
+              {title}
             </Typography>
             <Stack
               direction={"row"}
@@ -90,7 +90,7 @@ export const AboutExperts = () => {
                 fontWeight={"400"}
                 variant="h6"
               >
-                Designer
+                {text}
               </Typography>
               <Stack direction={"row"} alignItems={"center"} gap={"17px"}>
                 <IconButton>
@@ -106,7 +106,7 @@ export const AboutExperts = () => {
             </Stack>
           </Box>
         </Box>
-        <Box
+        {/* <Box
           width={"449px"}
           sx={{
             transition: "transform 0.3s ease",
@@ -154,7 +154,7 @@ export const AboutExperts = () => {
               </Stack>
             </Stack>
           </Box>
-        </Box>
+        </Box> */}
       </Stack>
     </>
   );

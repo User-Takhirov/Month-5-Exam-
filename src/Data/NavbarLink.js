@@ -1,8 +1,9 @@
 import { Home } from "../Pages/Home";
 import { About } from "../Pages/About";
 import { Shop } from "../Pages/Shop";
-import { Project } from "../Pages/Projects";
+// import { Project } from "../Pages/Projects";
 import { News } from "../Pages/News";
+import { Team } from "../Pages/Projects";
 
 export const NavbarLink = [
   {
@@ -25,9 +26,9 @@ export const NavbarLink = [
   },
   {
     id: 4,
-    path: "Project",
-    name: "Project",
-    element: Project,
+    path: "Team",
+    name: "Team",
+    element: Team,
   },
   {
     id: 5,

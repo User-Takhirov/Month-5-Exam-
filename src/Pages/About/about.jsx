@@ -1,6 +1,13 @@
 import React from "react";
 import AboutUsBg from "../../assets/img/aboutUsBg.png";
-import { Box, Stack, Typography, Button, Container } from "@mui/material";
+import {
+  Box,
+  Stack,
+  Typography,
+  Button,
+  Container,
+  Grid2,
+} from "@mui/material";
 import { Colors } from "../../Config/Colors";
 import AboutHero from "../../assets/img/AboutHero.png";
 import { LamborghiniIcon } from "../../assets/icons/lamborghini-icon";
@@ -12,7 +19,7 @@ import { AboutAds } from "../../components/About-Ads";
 import { AboutExperts } from "../../components/About-experts/about-experts";
 import { AboutUsOffer } from "../../Data/About-us-offer";
 import { AboutOffer } from "../../components/about-offer";
-
+import { ExportData } from "../../Data/ExportsData";
 export const About = () => {
   return (
     <>
@@ -237,7 +244,19 @@ export const About = () => {
               the 1500s, when an unknown printer took a galley.
             </Typography>
           </Box>
-          <AboutExperts />
+          <Box>
+            <Grid2 rowSpacing={"42px"} container spacing={"25px"}>
+              {ExportData.slice(0, 3).map((item) => (
+                <Grid2 key={item.id}>
+                  <AboutExperts
+                    img={item.img}
+                    title={item.title}
+                    text={item.text}
+                  />
+                </Grid2>
+              ))}
+            </Grid2>
+          </Box>
         </Container>
       </Box>
       <Box mb={"141px"} py={"188px"} bgcolor={Colors.primary}>
