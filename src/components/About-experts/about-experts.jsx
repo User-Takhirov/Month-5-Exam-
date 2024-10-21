@@ -10,152 +10,55 @@ import { Colors } from "../../Config/Colors";
 export const AboutExperts = ({ img, title, text }) => {
   return (
     <>
-      <Stack direction={"row"} alignItems={"center"} gap={"27px"}>
-        {/* <Box
-          width={"449px"}
-          sx={{
-            transition: "transform 0.3s ease",
-            cursor: "pointer",
-            bgcolor: `${Colors.darkWhite}`,
-            borderRadius: "30px",
-            boxShadow: `0px 29px 44px 0px rgba(150, 150, 150, 0.25)`,
-            "&:hover": {
-              transform: "translateY(20px)",
-              bgcolor: `${Colors.white}`,
-            },
-          }}
-        >
-          <Box height={"485px"}>
-            <img src={Export1} alt="#" />
-          </Box>
-          <Box p={"35px 28px"}>
-            <Typography mb={"2px"} variant="h6">
-              Giovani Bacardo
-            </Typography>
-            <Stack
-              direction={"row"}
-              alignItems={"center"}
-              justifyContent={"space-between"}
-            >
-              <Typography
-                fontFamily={"YellowTail"}
-                color={Colors.lightGreen}
-                fontSize={"22px"}
-                fontWeight={"400"}
-                variant="h6"
-              >
-                Farmer
-              </Typography>
-              <Stack direction={"row"} alignItems={"center"} gap={"17px"}>
-                <IconButton>
-                  <MiniFaceBook />
-                </IconButton>
-                <IconButton>
-                  <MiniTwitter />
-                </IconButton>
-              </Stack>
-            </Stack>
-          </Box>
-        </Box> */}
-        <Box
-          width={"449px"}
-          sx={{
-            transition: "transform 0.3s ease",
-            bgcolor: `${Colors.darkWhite}`,
-            cursor: "pointer",
-            borderRadius: "30px",
-            boxShadow: `0px 29px 44px 0px rgba(150, 150, 150, 0.25)`,
-            "&:hover": {
-              transform: "translateY(20px)",
-              bgcolor: `${Colors.white}`,
-            },
-          }}
-        >
-          <Box height={"485px"}>
-            <img src={img} alt="#" />
-          </Box>
-          <Box p={"35px 28px"}>
-            <Typography mb={"2px"} variant="h6">
-              {title}
-            </Typography>
-            <Stack
-              direction={"row"}
-              alignItems={"center"}
-              justifyContent={"space-between"}
-            >
-              <Typography
-                fontFamily={"YellowTail"}
-                color={Colors.lightGreen}
-                fontSize={"22px"}
-                fontWeight={"400"}
-                variant="h6"
-              >
-                {text}
-              </Typography>
-              <Stack direction={"row"} alignItems={"center"} gap={"17px"}>
-                <IconButton>
-                  <MiniInstagram />
-                </IconButton>
-                <IconButton>
-                  <MiniFaceBook />
-                </IconButton>
-                <IconButton>
-                  <MiniTwitter />
-                </IconButton>
-              </Stack>
-            </Stack>
-          </Box>
+      <Box
+        width={"449px"}
+        sx={{
+          transition: "transform 0.3s ease",
+          bgcolor: `${Colors.darkWhite}`,
+          cursor: "pointer",
+          borderRadius: "30px",
+          boxShadow: `0px 29px 44px 0px rgba(150, 150, 150, 0.25)`,
+          "&:hover": {
+            transform: "translateY(20px)",
+            bgcolor: `${Colors.white}`,
+          },
+        }}
+      >
+        <Box height={"485px"}>
+          <img src={img} alt="#" />
         </Box>
-        {/* <Box
-          width={"449px"}
-          sx={{
-            transition: "transform 0.3s ease",
-            bgcolor: `${Colors.darkWhite}`,
-            cursor: "pointer",
-            borderRadius: "30px",
-            boxShadow: `0px 29px 44px 0px rgba(150, 150, 150, 0.25)`,
-            "&:hover": {
-              transform: "translateY(20px)",
-              bgcolor: `${Colors.white}`,
-            },
-          }}
-        >
-          <Box height={"485px"}>
-            <img src={Export3} alt="#" />
-          </Box>
-          <Box p={"35px 28px"}>
-            <Typography mb={"2px"} variant="h6">
-              Riga Pelore
-            </Typography>
-            <Stack
-              direction={"row"}
-              alignItems={"center"}
-              justifyContent={"space-between"}
+        <Box p={"35px 28px"}>
+          <Typography mb={"2px"} variant="h6">
+            {title}
+          </Typography>
+          <Stack
+            direction={"row"}
+            alignItems={"center"}
+            justifyContent={"space-between"}
+          >
+            <Typography
+              fontFamily={"YellowTail"}
+              color={Colors.lightGreen}
+              fontSize={"22px"}
+              fontWeight={"400"}
+              variant="h6"
             >
-              <Typography
-                fontFamily={"YellowTail"}
-                color={Colors.lightGreen}
-                fontSize={"22px"}
-                fontWeight={"400"}
-                variant="h6"
-              >
-                Farmer
-              </Typography>
-              <Stack direction={"row"} alignItems={"center"} gap={"17px"}>
-                <IconButton>
-                  <MiniInstagram />
-                </IconButton>
-                <IconButton>
-                  <MiniFaceBook />
-                </IconButton>
-                <IconButton>
-                  <MiniTwitter />
-                </IconButton>
-              </Stack>
+              {text}
+            </Typography>
+            <Stack direction={"row"} alignItems={"center"} gap={"17px"}>
+              <IconButton>
+                <MiniInstagram />
+              </IconButton>
+              <IconButton>
+                <MiniFaceBook />
+              </IconButton>
+              <IconButton>
+                <MiniTwitter />
+              </IconButton>
             </Stack>
-          </Box>
-        </Box> */}
-      </Stack>
+          </Stack>
+        </Box>
+      </Box>
     </>
   );
 };

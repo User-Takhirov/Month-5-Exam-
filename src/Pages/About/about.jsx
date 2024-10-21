@@ -245,9 +245,9 @@ export const About = () => {
             </Typography>
           </Box>
           <Box>
-            <Grid2 rowSpacing={"42px"} container spacing={"25px"}>
+            <Grid2 container spacing={"25px"}>
               {ExportData.slice(0, 3).map((item) => (
-                <Grid2 key={item.id}>
+                <Grid2 size={4} key={item.id}>
                   <AboutExperts
                     img={item.img}
                     title={item.title}

@@ -39,7 +39,7 @@ export const Team = () => {
         </Box>
         <Box>
           <Container maxWidth="lg">
-            <Grid2 container spacing={"25px"}>
+            <Grid2 container rowSpacing={"42px"} spacing={"25px"}>
               {ExportData.map((item) => (
                 <Grid2 key={item.id}>
                   <AboutExperts
